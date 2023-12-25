@@ -1,0 +1,46 @@
+.wrapper{
+  @apply w-full h-full flex flex-col bg-[var(--bg)] text-[var(--textClr)]
+}
+.title{
+  @apply text-[30px]
+}
+.title::placeholder{
+  @apply text-gray-400
+}
+.article{
+  @apply w-full h-full relative
+}
+.content{
+  @apply w-full h-full
+}
+.title,
+.content{
+  @apply bg-transparent resize-none outline-none;
+}
+
+/*======== BUTTONS =========== */
+.buttons{
+  @apply absolute left-0 top-0 flex gap-8 items-center pt-2
+}
+.options{
+  @apply flex items-center gap-4
+}
+.buttons button{
+  @apply rounded-full p-2 border-2 border-gray-400 text-gray-400;
+  @apply hover:text-[var(--textClr)] hover:border-[var(--textClr)] relative;
+}
+.tooltip{
+  @apply hidden absolute left-1/2 -translate-x-1/2;
+  @apply w-max h-max px-4 py-2 bg-[var(--textClr)] text-[var(--bg)] font-medium text-sm rounded-xl;
+  top: calc(100% + 1rem);
+}
+.options button:hover .tooltip{
+  @apply block;
+}
+.tooltip::after{
+  content: '';
+  border: 1rem solid transparent;
+  border-bottom-color: var(--textClr);
+  @apply block absolute left-1/2 -translate-x-1/2;
+  top: -1.75rem;
+}

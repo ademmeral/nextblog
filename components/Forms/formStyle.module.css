@@ -1,0 +1,53 @@
+.section,
+.wrapper{
+    @apply h-full w-full
+}
+.wrapper{
+    @apply grid place-items-center
+}
+.form{
+    @apply w-[80%] lg:w-max h-max flex flex-col gap-4 p-10 mt-10 rounded-lg bg-[var(--bg)];
+    @apply shadow-lg shadow-[var(--bgSoft)];
+}
+.form h3{
+    @apply text-[var(--textClr)] text-center mb-4 ; 
+}
+.inputs{
+    @apply flex flex-col gap-4;
+}
+.form input {
+    @apply min-w-[250px] h-[50px] lg:min-w-[450px] outline-none border-b-2 ;
+    @apply border-[var(--textSoft)] bg-transparent focus:border-[var(--textClr)];
+    @apply text-lg text-[var(--textClr)];
+}
+.submit{
+    @apply w-max h-max self-center rounded-lg bg-[var(--bg)] text-lg;
+    @apply hover:bg-[var(--bgSoft)] px-8 py-2 font-semibold shadow-sm shadow-[var(--bgSoft)];
+    @apply text-[var(--textClr)] border-2 border-[var(--bgSoft)];
+}
+.submit:disabled{
+    opacity: .5;
+    background-color: var(--bg);
+    cursor: not-allowed;
+}
+.form small{
+    @apply flex gap-2
+}
+.form small a{
+    @apply text-blue-500 hover:text-blue-800 underline underline-offset-4
+}
+.emailArea{
+    @apply flex gap-2 text-[var(--textClr)]
+}
+.domain{
+    @apply flex
+}
+span.at{
+    @apply flex items-center bg-[var(--bgSoft)] px-4 rounded-lg
+}
+.errorMessage{
+    @apply text-red-600
+}
+.successMessage{
+    @apply text-green-600
+}

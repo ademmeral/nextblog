@@ -1,0 +1,50 @@
+.postlist{
+  @apply flex-1 lg:flex-[70%] flex flex-col gap-4
+}
+.posts{
+  @apply flex flex-col gap-8
+}
+
+/*======= POST ========== */
+.post{
+  @apply flex gap-4 border-b-[1px] border-gray-400/30 pb-4 lg:border-none
+}
+.post figure:first-of-type{
+  @apply flex-[40%]
+}
+.article{
+  @apply flex-[60%] flex flex-col gap-4
+}
+.article header{
+  @apply max-h-[60px]
+}
+.ctg{
+  @apply text-[var(--inst)]
+}
+.article time {
+  @apply text-[var(--textSoft)]
+}
+.texts{
+  @apply flex flex-col gap-4
+}
+.article a{
+  @apply underline underline-offset-[6px] decoration-orange-400;
+  text-decoration-thickness: 1px;
+}
+.img{
+  @apply hidden lg:block rounded-lg overflow-hidden
+}
+/*======= FEATURED ========== */
+.featured{
+  @apply flex flex-col gap-8
+}
+.title{
+  @apply flex flex-wrap font-bold tracking-wider;
+}
+
+.pagination{
+  @apply flex justify-between
+}
+.pagination :is(#prev, #next){
+  @apply py-2 px-6 text-white font-medium rounded-lg bg-[var(--lnkin)]
+}

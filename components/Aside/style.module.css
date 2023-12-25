@@ -1,0 +1,40 @@
+.aside{
+  @apply hidden lg:flex right-0 flex-1 flex-col gap-8;
+}
+.desc{
+  @apply text-[var(--textSoft)]
+}
+.ctg a{
+  @apply h-[40px] pl-1 pr-3 text-sm gap-1
+}
+/*======== POPULARS ======= */
+.populars{
+  @apply flex flex-col gap-8
+}
+.popular{
+  @apply flex gap-4
+}
+.article{
+  @apply flex-[3] flex flex-col gap-1
+}
+.article p{
+  @apply text-sm
+}
+.ctg{
+  @apply block w-max h-max py-[.1rem] px-3 mb-2 rounded-xl bg-orange-700 text-white font-medium
+}
+.author{
+  @apply font-semibold capitalize
+}
+.time{
+  @apply text-[var(--textSoft)] text-sm
+}
+.insertImg{
+  @apply flex gap-4
+}
+.img{ 
+  @apply hidden lg:block w-max h-max rounded-full self-center border-2 border-gray-400
+}
+.img img{
+  @apply w-[50px] h-[50px] rounded-full
+}

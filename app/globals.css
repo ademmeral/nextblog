@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  --inst : #E1306C;
+  --twt : #1DA1F2;
+  --fb : #4267B2;
+  --lnkin : #0075b5;
+  --reactjs : #61DBFB;
+  --nextjs : black;
+  --nodejs : #3c873a;
+  --css : #2965f1;
+  --html : #f06529;
+  --typescript : #007acc;
+  --javascript : #f0db4f;
+  --mongodb : #589636;
+  --redux : #764abc;
+
+  --reactjs-bg : #EA580C;
+  --nextjs-bg : #D6D3D1;
+  --nodejs-bg : #E4E4E7;
+  --css-bg : #93C5FD;
+  --html-bg : #7E22CE;
+  --typescript-bg : #86EFAC;
+  --javascript-bg : #2563EB;
+  --mongodb-bg : #FB7185;
+  --redux-bg : #16A34A;
+}
+
+._container.dark{
+  --bg : rgb(15, 23, 42);
+  --bgSoft : rgba(30, 41, 59, .75);
+  --textClr : #ddd;
+  --softBg : #1f273a;
+  --textSoft : #a6a6a6;
+}
+
+._container.light{
+  --bg : #eee;
+  --bgSoft : #ddd;
+  --textClr : black;
+  --softBg : #f0f0f0;
+  --textSoft : #626262;
+}
+html,
+body,
+._container{
+  @apply relative w-full min-h-screen bg-[var(--bg)] text-[var(--textClr)]
+}
+._container{
+  @apply grid grid-rows-layout gap-8
+}
+._container:not(:has(:where(nav, footer))){
+  @apply h-screen grid-rows-1 place-content-center
+}
+.wrapper{
+  @apply w-full max-w-wrapper m-center
+}
+a{
+  @apply block w-max h-max
+}
+a:not(.logo, .categories a, .visitorsText a){
+  @apply hover:text-[var(--textSoft)]
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold text-[var(--textClr)]
+}
+
+h1{
+  @apply text-5xl lg:text-6xl capitalize
+}
+h2{
+  @apply text-4xl lg:text-5xl capitalize
+}
+h3{
+  @apply text-3xl lg:text-4xl capitalize
+}
+h4{
+  @apply text-2xl lg:text-3xl capitalize
+}
+h5{
+  @apply text-xl lg:text-2xl
+}
+h6{
+  @apply text-sm lg:text-xl
+}
+p{
+  @apply text-sm lg:text-base text-[var(--textClr)];
+}
+
+strong,
+code,
+li,
+pre{
+  color: var(--textClr) !important;
+}
+pre{
+  white-space: break-spaces !important;
+  background-color: var(--bgSoft) !important;
+}
+img{
+  @apply object-cover w-full h-full
+}
+input,
+button,
+textarea{
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+button:disabled{
+  opacity: .6;
+  cursor: not-allowed;
+}
+.home{
+  @apply grid gap-10
+}
+.scrolled{
+  @apply max-h-screen sticky top-0 overflow-y-scroll;
+}
+.no-scrollbar{
+  scrollbar-width: 0;
+}
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+.markdown:not(aside .markdown){
+  @apply w-full h-max
+}
+.markdown:not(aside .markdown) :where(p, h3,h4,h5,h6){
+  @apply my-6
+}
+.markdown:not(aside .markdown) :where(h1, h2){
+  @apply mb-8
+}
+aside .markdown :where(p, h1,h2,h3,h4,h5,h6){
+  @apply my-2
+}
+/* ====== TEXT EDITOR ====== */
+.quill{
+  @apply h-full
+}
+.ql-container{
+  font-size: 30px !important;
+}
+.ql-editor{
+  padding: 0 !important;
+  padding-top: 3.5rem !important;
+}
+.quill > .ql-container > .ql-editor.ql-blank::before{
+  @apply text-gray-400;
+  left: 0;
+}

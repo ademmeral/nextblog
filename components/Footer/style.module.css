@@ -1,0 +1,18 @@
+.wrapper{
+  @apply flex items-start justify-between gap-4 py-2 text-sm border-t border-t-gray-500/50 pt-8
+}
+.wrapper header:first-of-type{
+  @apply flex-1 mr-4
+}
+.wrapper figure{
+   @apply flex flex-col gap-4
+}
+.linksWrp{
+  @apply flex-1 w-full flex justify-between items-center
+}
+.links{
+  @apply flex flex-col items-center
+}
+.logo{
+  @apply flex gap-1 items-center
+}

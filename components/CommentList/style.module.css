@@ -1,0 +1,72 @@
+.comments{
+  @apply w-full flex flex-col gap-6
+}
+.textarea{
+  @apply w-full flex flex-col rounded-lg overflow-hidden bg-[var(--textClr)] border-[1px] border-[var(--textSoft)]
+}
+.sendArea{
+  @apply h-max w-full flex items-center justify-end p-2 border-t-[1px] border-[var(--textSoft)]
+}
+.submit{
+  @apply w-max h-max py-2 px-6 bg-blue-600 rounded-lg;
+  @apply font-medium text-white shadow-sm
+}
+#textarea{
+  @apply w-full min-h-[100px] resize-none p-4 text-black outline-none bg-[var(--textClr)]
+}
+#edit,
+#edit textarea{
+  @apply bg-[var(--bgSoft)] text-[var(--textClr)]
+}
+#edit{
+  @apply border-none
+}
+#edit .sendArea{
+   @apply border-[var(--bg)] bg-[var(--bgSoft)] gap-4
+}
+#edit .submit{
+  @apply bg-transparent text-[var(--textClr)] border-[1px] border-[var(--textSoft)]
+}
+.ul{
+  @apply flex flex-col gap-10
+}
+.wrapper{ /*COMMENT WRAPPER*/
+  @apply flex flex-col gap-4 bg-[var(--bgSoft)] p-8 rounded-xl
+}
+.figure{
+  @apply w-full h-max flex gap-4 font-medium
+}
+.figcaption{
+  @apply w-full flex justify-between items-start;
+}
+.author{
+  @apply flex flex-col items-start w-max h-max
+}
+.img{
+  @apply w-[50px] h-[50px] rounded-full border-2
+}
+.time{
+  @apply text-[var(--textSoft)] capitalize
+}
+.article{
+  @apply flex flex-col gap-2 items-start
+}
+.article h6{
+  @apply text-base
+}
+.article p {
+  @apply  text-sm
+}
+.article button{
+  @apply w-max h-max decoration-1 decoration-[var(--textClr)] underline underline-offset-4;
+  @apply hover:text-[var(--textSoft)] hover:decoration-[var(--textSoft)];
+}
+.visitorText{
+  @apply text-lg mb-8
+}
+.visitorText a{
+  @apply  inline text-blue-600 hover:text-blue-400 mx-[5px];
+}
+.commentUptDel{
+  @apply w-max h-max flex gap-4 justify-center items-center
+}

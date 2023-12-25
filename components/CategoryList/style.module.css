@@ -1,0 +1,49 @@
+.categories{
+  @apply flex-col gap-2
+}
+.categories h3{
+  @apply mb-4
+}
+.list{
+  @apply flex gap-4 flex-wrap
+}
+.ctg{
+  @apply flex-1
+}
+.ctg a{
+  @apply  w-full h-[40px] px-2 flex justify-center;
+  @apply items-center gap-[3px] text-base lg:text-lg font-medium rounded-md;
+}
+.list li:nth-child(odd) a{
+  @apply text-white
+}
+.list li:nth-child(even) a{
+  @apply text-black
+}
+.list li:first-child a{
+  @apply bg-[var(--javascript-bg)]
+}
+.list li:nth-child(2) a{
+  @apply bg-[var(--typescript-bg)]
+}
+.list li:nth-child(3) a{
+  @apply bg-[var(--mongodb-bg)] gap-0;
+}
+.list li:nth-child(4) a{
+  @apply bg-[var(--nodejs-bg)]
+}
+.list li:nth-child(5) a{
+  @apply bg-[var(--reactjs-bg)]
+}
+.list li:nth-child(6) a{
+  @apply bg-[var(--nextjs-bg)]
+}
+.list li:nth-child(7) a{
+  @apply bg-[var(--html-bg)]
+}
+.list li:nth-child(8) a{
+  @apply bg-[var(--css-bg)]
+}
+.list li:last-child a{
+  @apply bg-[var(--redux-bg)]
+}

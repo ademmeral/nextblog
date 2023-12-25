@@ -1,0 +1,50 @@
+.nav{
+  @apply h-[70px] py-4 flex justify-between items-center lg:border-b-2 lg:border-gray-200/50
+}
+.socials,
+.links,
+.logo h3 {
+  @apply hidden lg:flex
+}
+.socials{
+  @apply flex-1 items-center gap-2
+}
+.logo{
+  @apply flex-1 flex gap-2 items-center
+}
+.links{
+  @apply flex-1 justify-between items-center text-lg gap-4 ml-8
+}
+
+.socials a:first-child svg{
+  @apply text-[var(--inst)]
+}
+.socials a:nth-child(2) svg{
+  @apply text-[var(--fb)]
+}
+.socials a:nth-child(3) svg{
+  @apply text-[var(--twt)]
+}
+.socials a:last-child svg{
+  @apply text-[var(--lnkin)]
+}
+.logo svg:last-child{
+  @apply text-[#dd1f13]
+}
+
+/* ====== BURGER MENU ====== */
+.sticks {
+  @apply lg:hidden flex flex-col gap-[5px] w-[30px] h-[30px] mt-1 ml-8
+}
+
+.stick {
+  @apply w-full h-[5px] rounded-xl bg-[var(--textClr)]
+}
+.brgMenu {
+  @apply absolute top-[70px] right-0 left-0 bottom-0 bg-[var(--bg)] z-[99];
+  min-height: calc(100vh - 70px);
+}
+
+.brgMenu a {
+  @apply block w-full h-full py-8 text-[var(--textClr)] text-center text-xl
+}

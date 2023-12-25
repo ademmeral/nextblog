@@ -1,0 +1,43 @@
+/* ====== THEME TOGGLE ====== */
+.frame {
+  @apply flex h-[24px] w-[64px] overflow-hidden relative;
+  border-radius: 12px;
+}
+
+@media screen and (max-width : 1000px) {
+  .frame {
+    @apply hidden
+  }
+}
+
+.btn {
+  @apply absolute top-1/2 -translate-y-1/2 h-[22px] w-[22px] rounded-full bg-[var(--textSoft)];
+}
+
+.btn.light {
+  @apply right-[1px];
+}
+
+.btn.dark {
+  @apply left-[1px];
+}
+
+.frame figure {
+  @apply flex-1 flex items-center h-full cursor-pointer px-1
+}
+
+figure.light {
+  @apply bg-black text-white
+}
+
+figure.dark {
+  @apply bg-white text-black
+}
+
+.moon {
+  @apply justify-start;
+}
+
+.sun {
+  @apply justify-end;
+}
